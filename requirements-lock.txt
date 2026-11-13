@@ -1,0 +1,3 @@
+# 验收环境：Python 3.12.15；可选用 pip install -r requirements-lock.txt 复现
+numpy==2.5.4
+opencv-python-headless==4.14.0.94

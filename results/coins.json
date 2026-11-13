@@ -1,0 +1,26 @@
+{
+  "width": 760,
+  "height": 385,
+  "count": 2,
+  "circles": [
+    {
+      "x": 193.5,
+      "y": 192.5,
+      "radius": 178.7
+    },
+    {
+      "x": 567.5,
+      "y": 191.5,
+      "radius": 179.0
+    }
+  ],
+  "parameters": {
+    "dp": 1.0,
+    "min_dist": 250,
+    "param1": 100,
+    "param2": 35,
+    "min_radius": 165,
+    "max_radius": 190,
+    "blur": 5
+  }
+}
