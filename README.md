@@ -67,3 +67,33 @@ python -m unittest discover -s tests -v
 样例取自 [培训练习仓库](https://github.com/Ecrypted-Data/rt-git-openspec-lab/tree/main/examples/hough)。硬币图：Jaclyn Nash / Smithsonian Institution，美国公有领域；饼干盘图：Helen Alfvegren，[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)。本仓库照片与标注衍生图均沿用相应署名与许可，详见 [SOURCES](examples/SOURCES.md)。
 
 算法参考 [OpenCV 官方霍夫圆检测教程](https://docs.opencv.org/4.x/d4/d70/tutorial_hough_circle.html)。半径范围用于排除内部纹理，param2 越低通常得到更多候选圆；目标接近圆形、外缘清晰时效果更好。
+
+## 技术选型任务五：交接分支
+
+本工作分支：[`feat/5-video-handoff`](https://github.com/AM1100/hough-circle-tool/tree/feat/5-video-handoff)。**当前图片功能已完成，视频功能仅有规划，尚未实现。** 本次不新增视频代码。
+
+接手复现：
+
+```bash
+git clone --branch feat/5-video-handoff --single-branch https://github.com/AM1100/hough-circle-tool.git
+cd hough-circle-tool
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-lock.txt
+python -m unittest discover -s tests -v
+python app.py --input examples/coins.jpg --output results/coins-annotated.png --preset coins
+python app.py --input examples/cookie-plate.jpg --output results/cookie-plate-annotated.png --preset cookie-plate
+python app.py
+```
+
+所有样例已随Git仓库提交，无需私有下载链接：`examples/coins.jpg`、`examples/cookie-plate.jpg`，来源与许可在 examples/SOURCES.md；`results/` 中保留原尺寸标注图与参数JSON。使用Python 3.12可复现本次实际环境。启动后访问 <http://127.0.0.1:8765>，端口冲突时用 --port 指定其他端口。
+
+2026-11-16重新验收：5项测试通过，硬币2圆、盘沿1圆，圆坐标与上文一致。
+
+- [当前完成状态、实际结果和未验证事项](openspec/changes/add-video-detection/status.md)
+- [拟新增视频需求](openspec/changes/add-video-detection/proposal.md)
+- [视频验收场景](openspec/changes/add-video-detection/specs/video-circle-detection/spec.md)
+- [后续模块方案](openspec/changes/add-video-detection/design.md)
+- [接手任务清单](openspec/changes/add-video-detection/tasks.md)
+
+接手人从任务2.1“准备真实短视频并记录元数据”开始。当前 --input 仍接收图片，尚无可运行的视频命令；视频结果、实时性和参数泛化均未验证。后续在同一个 add-video-detection 变更里继续，不要把待办改为已完成。
