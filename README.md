@@ -70,12 +70,12 @@ python -m unittest discover -s tests -v
 
 ## 技术选型任务五：交接分支
 
-本工作分支：[`feat/5-video-handoff`](https://github.com/AM1100/hough-circle-tool/tree/feat/5-video-handoff)。**当前图片功能已完成，视频功能仅有规划，尚未实现。** 本次不新增视频代码。
+本工作分支：[`feat/video-handoff`](https://github.com/AM1100/hough-circle-tool/tree/feat/video-handoff)。**当前图片功能已完成，视频功能仅有规划，尚未实现。** 本次不新增视频代码。
 
 接手复现：
 
 ```bash
-git clone --branch feat/5-video-handoff --single-branch https://github.com/AM1100/hough-circle-tool.git
+git clone --branch feat/video-handoff --single-branch https://github.com/AM1100/hough-circle-tool.git
 cd hough-circle-tool
 python3 -m venv .venv
 source .venv/bin/activate

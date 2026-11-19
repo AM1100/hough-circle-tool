@@ -1,6 +1,6 @@
 # 交接状态与实际验收
 
-日期：2026-11-16。分支：feat/5-video-handoff。图片基线：dc37779。交出准备完成；视频实施任务尚未开始，tasks.md 中第2、3组保持未勾选。
+日期：2026-11-16。分支：feat/video-handoff。图片基线：dc37779。交出准备完成；视频实施任务尚未开始，tasks.md 中第2、3组保持未勾选。
 
 ## 当前已完成
 - 当前可运行代码：图片GUI、图片CLI、参数预设、PNG标注和坐标结果。
@@ -29,3 +29,7 @@ python app.py --input examples/cookie-plate.jpg --output /tmp/hough-handoff-plat
 2. 阅读本变更的 proposal.md、specs/video-circle-detection/spec.md、design.md、tasks.md；确认本次交接范围。
 3. 从 tasks.md 的2.1开始，先选真实短视频并保存元数据和代表帧，再改检测核心；不要从重写图片界面开始。
 4. 若使用OpenSpec CLI，运行 `openspec status --change add-video-detection --json` 与 `openspec instructions apply --change add-video-detection --json`；如使用Codex，接手后可明确请求 `$openspec-apply-change add-video-detection`。本次没有执行这些实施任务。
+
+## 2026-11-19 命名评审修订
+
+依据 GitHub Issue #1，已将现有交接提交放到 `feat/video-handoff`，不再把培训任务编号当作Issue编号。README克隆命令与分支直达链接同步更新。原分支保留；原图片代码、样例、验收结果与视频待办沿用，未新增视频实现。提交问卷中的分支链接应改为本分支。
